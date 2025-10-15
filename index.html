@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaunchIT! - Turn Your Expertise Into Income</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -64,23 +64,24 @@
         
         .hero-badge {
             display: inline-block;
-            background: #0a0a0a;
-            color: #fff;
-            padding: 14px 32px;
-            font-weight: 800;
-            font-size: 1em;
-            letter-spacing: 1.5px;
-            margin-bottom: 45px;
+            background: transparent;
+            color: #0f766e;
+            padding: 8px 0;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
             text-transform: uppercase;
         }
         
         .hero h1 {
-            font-size: 5.5em;
-            font-weight: 900;
-            line-height: 1.05;
-            margin-bottom: 30px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 4.2em;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 50px;
             color: #0a0a0a;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
         }
         
         .hero-subtitle {
@@ -96,13 +97,34 @@
         
         .hero-meta {
             display: inline-block;
+            background: transparent;
+            color: #0f766e;
+            padding: 0;
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 35px;
+        }
+        
+        .hero-cta {
+            display: inline-block;
             background: #0f766e;
             color: white;
-            padding: 16px 36px;
-            font-weight: 800;
-            font-size: 1.05em;
+            padding: 20px 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+        
+        .hero-cta:hover {
+            background: #0d5d56;
+            transform: translateY(-2px);
         }
         
         /* Stats Bar */
@@ -225,7 +247,7 @@
             color: #0a0a0a;
         }
         
-        /* UPDATED Problem Section with closing quotes */
+        /* Problem Section */
         .problem-questions {
             background: linear-gradient(135deg, #ffffff 0%, #faf5ff 50%, #f0fdf4 100%);
             padding: 65px;
@@ -392,7 +414,7 @@
             font-weight: 600;
         }
         
-        /* Client Results - Dark Section */
+        /* Client Results */
         .client-results-dark {
             background: #0a0a0a;
             color: white;
@@ -556,47 +578,40 @@
         
         .outcome-card:nth-child(1) { --order: 1; }
         .outcome-card:nth-child(2) { --order: 2; }
-        .outcome-card:nth-child(3) { --order: 3; }
-        .outcome-card:nth-child(4) { --order: 4; }
-        
-        .outcome-card::before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(135deg, #0f766e, #c084fc);
-            border-radius: 20px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: -1;
-        }
-        
-        .outcome-card:hover::before {
-            opacity: 1;
-        }
         
         .outcome-card:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-8px);
             box-shadow: 0 20px 70px rgba(0, 0, 0, 0.15);
-            border-color: transparent;
+            border-color: #0f766e;
         }
         
         .outcome-card h3 {
             color: #0f766e;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             font-weight: 900;
             font-size: 2em;
         }
         
-        .outcome-card p {
-            margin: 0;
-            position: relative;
-            z-index: 2;
+        .outcome-card ul {
+            list-style: none;
+            padding-left: 0;
         }
         
-        /* UPDATED Who This Is For section */
+        .outcome-card li {
+            color: #1a1a1a;
+            font-size: 1.1em;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .outcome-card p {
+            margin: 0;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        /* Who This Is For */
         .wtif-section {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             position: relative;
@@ -902,7 +917,7 @@
             font-weight: 600;
         }
         
-        .cohort-highlight {
+        .group-highlight {
             text-align: center;
             margin-top: 55px;
             padding: 35px;
@@ -911,7 +926,7 @@
             border: 3px solid #14b8a6;
         }
         
-        .cohort-highlight p {
+        .group-highlight p {
             font-size: 1.5em;
             font-weight: 900;
             color: #14b8a6;
@@ -1020,7 +1035,7 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .hero h1 {
-                font-size: 3.5em;
+                font-size: 3em;
             }
             
             h2 {
@@ -1049,7 +1064,7 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             
             h2 {
@@ -1066,10 +1081,9 @@
     <!-- Hero -->
     <div class="hero">
         <div class="hero-content">
-            <div class="hero-badge">For People Done Thinking About It</div>
             <h1>You're Successful.<br>So Why Do You Feel Stuck?</h1>
-            <p class="hero-subtitle">LaunchIT! helps you discover and monetize your zone of genius turning your expertise into a real business in 4 weeks.</p>
-            <div class="hero-meta">Next Group Starting in November!</div>
+            <p class="hero-subtitle">LaunchIT! You've built the expertise. Now monetize it. A 4-week intensive for professionals at inflection points. Create your offering, set your pricing, choose your path.</p>
+            <a href="#" class="hero-cta">Join the November Group</a>
         </div>
     </div>
 
@@ -1094,7 +1108,7 @@
     <!-- Problem Section -->
     <section class="section-alt">
         <div class="container">
-            <h2 style="text-align: center;">If You've Ever Thought These Things,<br>You're in the Right Place</h2>
+            <h2 style="text-align: center;">If You've Ever Had These Thoughts,<br>You're in the Right Place</h2>
             
             <div class="problem-content">
                 <div class="problem-questions">
@@ -1210,7 +1224,7 @@
         </div>
     </section>
 
-    <!-- Client Results - Dark Section -->
+    <!-- Client Results -->
     <section class="client-results-dark">
         <div class="container">
             <h2 style="text-align: center;">What Our Clients Have Built</h2>
@@ -1244,9 +1258,9 @@
     <section class="section-alt">
         <div class="container">
             <div class="program-intro">
-                <h2>Four Weeks. One Outcome:<br>A Service You Can Sell This Month.</h2>
-                <p style="font-size: 1.3em; font-weight: 700;">This isn't a course about "finding your passion." This isn't motivation or inspiration.</p>
-                <p style="font-size: 1.3em; font-weight: 700;">This is you building something concrete. A real service offering with clear value, confident pricing, and a pitch you can use immediately.</p>
+                <h2>Four Weeks. Four Outcomes.<br>One Clear Path Forward.</h2>
+                <p style="font-size: 1.3em; font-weight: 700;">This isn't about finding your passion or getting motivated.</p>
+                <p style="font-size: 1.3em; font-weight: 700;">This is about building something concrete that you can sell this month.</p>
             </div>
             
             <div class="week-card">
@@ -1256,7 +1270,8 @@
                 </div>
                 <div class="week-content">
                     <div class="week-title">Get Clear on What You Actually Want</div>
-                    <p class="week-description">Not what you think you should want. What you <em>actually</em> want. We identify the work that energizes you, the clients you want to serve, and the life you want to build. No more guessing.</p>
+                    <p class="week-description" style="font-style: italic; font-weight: 700; margin-bottom: 10px;">Expertise Audit & Positioning</p>
+                    <p class="week-description">Not what you think you should want. What you <em>actually</em> want. We identify the work that energizes you and the clients you want to serve. Complete our Expertise Audit Framework to reveal what people will actually pay you for. Walk away with a clear positioning statement and defined target market.</p>
                 </div>
             </div>
             
@@ -1267,7 +1282,8 @@
                 </div>
                 <div class="week-content">
                     <div class="week-title">Build Your Service Offering</div>
-                    <p class="week-description">No vague consulting. No generic coaching. No "I help people with stuff." You package your expertise into a specific, valuable service that solves a real problem. Something concrete you can pitch this week.</p>
+                    <p class="week-description" style="font-style: italic; font-weight: 700; margin-bottom: 10px;">Service Design & Packaging</p>
+                    <p class="week-description">No vague consulting. No generic coaching. No "I help people with stuff." Transform your expertise into a specific, valuable service that solves a real problem. Build your complete service structure including deliverables, timelines, and scope. Create a one-page service offering document you can send to prospects immediately.</p>
                 </div>
             </div>
             
@@ -1278,7 +1294,8 @@
                 </div>
                 <div class="week-content">
                     <div class="week-title">Price It and Pitch It</div>
-                    <p class="week-description">Price based on value delivered, not hours worked. Practice your pitch without feeling weird about it. Stop apologizing for your rates. Charge what you're worth.</p>
+                    <p class="week-description" style="font-style: italic; font-weight: 700; margin-bottom: 10px;">Value-Based Pricing & Financial Model</p>
+                    <p class="week-description">Price based on value delivered, not hours worked. Build your financial model using our pricing calculator. Practice your pitch without feeling weird about it. Learn to handle pricing conversations without apologizing or immediately discounting.</p>
                 </div>
             </div>
             
@@ -1289,7 +1306,8 @@
                 </div>
                 <div class="week-content">
                     <div class="week-title">Present and Refine</div>
-                    <p class="week-description">Present your complete offering to the group. Get direct feedback from Jake and Nikki. Walk away with a refined service you can start selling tomorrow.</p>
+                    <p class="week-description" style="font-style: italic; font-weight: 700; margin-bottom: 10px;">Live Practice & Market Ready</p>
+                    <p class="week-description">Present your complete offering to the group. Get direct feedback from Jake and Nikki through live pitch practice. Refine your marketing messages and walk away with a pitch deck and materials ready to use tomorrow.</p>
                 </div>
             </div>
         </div>
@@ -1302,78 +1320,80 @@
             
             <div class="outcomes-grid">
                 <div class="outcome-card">
-                    <h3>A Sellable Service</h3>
-                    <p>Not a vague idea. A concrete offering with defined outcomes, clear pricing, and a pitch you've practiced and refined.</p>
+                    <h3>The Tangibles</h3>
+                    <ul>
+                        <li>• Your completed Expertise Audit and positioning statement</li>
+                        <li>• One-page service offering document</li>
+                        <li>• Value-based pricing model and calculator</li>
+                        <li>• Marketing materials and pitch deck</li>
+                        <li>• Access to all frameworks and templates</li>
+                        <li>• Recordings of all sessions for reference</li>
+                    </ul>
                 </div>
                 
                 <div class="outcome-card">
-                    <h3>Your Strategic Path</h3>
-                    <p>Know whether to leap, build while working, or create a hybrid approach. Understand your risk tolerance and what actually fits your life.</p>
-                </div>
-                
-                <div class="outcome-card">
-                    <h3>Confident Pricing</h3>
-                    <p>Know exactly what to charge and why. No more undervaluing yourself or feeling weird about money conversations.</p>
-                </div>
-                
-                <div class="outcome-card">
-                    <h3>A Pitch That Works</h3>
-                    <p>You've practiced. You've gotten feedback. You're ready to have real conversations with real prospects without sounding desperate or apologetic.</p>
+                    <h3>The Intangibles</h3>
+                    <ul>
+                        <li>• A sellable service with defined outcomes and clear pricing</li>
+                        <li>• Your strategic path forward (leap, build, or hybrid)</li>
+                        <li>• Confidence to charge what you're worth</li>
+                        <li>• A practiced pitch you've refined with real feedback</li>
+                        <li>• Clarity on who you serve and problems you solve</li>
+                        <li>• Connection with others making similar transitions</li>
+                    </ul>
                 </div>
             </div>
             
-            <p style="text-align: center; margin-top: 60px; font-size: 1.5em; font-weight: 800;">More importantly: You'll remember what it feels like to be excited about Monday mornings instead of dreading them.</p>
+            <p style="text-align: center; margin-top: 60px; font-size: 1.5em; font-weight: 800;">Bottom Line: You'll have a complete business package ready to launch, not just ideas about what you might do someday.</p>
         </div>
     </section>
 
     <!-- Who This Is For -->
     <section class="wtif-section">
         <div class="container">
-            <h2 style="text-align: center;">What Makes This Different</h2>
+            <h2 style="text-align: center;">Who Should Join</h2>
             
             <div class="wtif-box">
-                <h3>Who Should Apply</h3>
+                <h3>You're Ready If:</h3>
                 <ul>
-                    <li>You've achieved what you were supposed to achieve, and you're brave enough to admit it's not enough.</li>
-                    <li>You refuse to spend the next 20 years building someone else's vision while your dreams gather dust.</li>
-                    <li>You have expertise that could genuinely help people, but you've been too scared or stuck to figure out how to share it.</li>
-                    <li>You're done waiting for permission, for perfect timing, for more clarity. You're ready to build with what you have right now.</li>
-                    <li>You understand that transformation requires work, discomfort, and courage—and you're finally ready to do what it takes.</li>
+                    <li>You have 5+ years of professional expertise</li>
+                    <li>People already ask you for advice in your area of knowledge</li>
+                    <li>You've achieved career success but want something more</li>
+                    <li>You can commit 4-6 hours per week for four weeks</li>
+                    <li>You're done researching and ready to build</li>
                 </ul>
             </div>
             
             <div class="wtif-grid">
                 <div class="wtif-box">
-                    <h3>What This ISN'T</h3>
+                    <h3>This Won't Work If:</h3>
                     <ul>
-                        <li>Us talking at you for 90 minutes while you take notes and hope something sticks.</li>
-                        <li>Generic business advice that could apply to anyone, anywhere, doing anything.</li>
-                        <li>A recorded course you work through alone, wondering if you're doing it right.</li>
-                        <li>Surface-level motivation that feels good in the moment but changes nothing.</li>
-                        <li>A community of thousands where your questions get lost and your voice doesn't matter.</li>
+                        <li>You're looking for passive income or quick schemes</li>
+                        <li>You expect the business to build itself</li>
+                        <li>You can't commit to the live sessions</li>
+                        <li>You're not willing to do work between sessions</li>
+                        <li>You need validation more than transformation</li>
                     </ul>
                 </div>
                 
                 <div class="wtif-box">
-                    <h3>What This IS</h3>
+                    <h3>What This IS:</h3>
                     <ul>
-                        <li>A small group of ambitious professionals who are done waiting and ready to build.</li>
-                        <li>Direct, personalized feedback on your specific offering, your pricing, your pitch.</li>
-                        <li>Real frameworks from people who've actually made this transition—not theory from people who've only taught it.</li>
-                        <li>The accountability and support you need to do the thing you've been putting off.</li>
-                        <li>A place where you can't hide, can't make excuses, and can't stay comfortable.</li>
+                        <li>An intimate group of ambitious professionals ready to build</li>
+                        <li>Direct, personalized feedback on your specific offering</li>
+                        <li>Real frameworks from coaches who've actually done this</li>
+                        <li>The accountability you need to finally take action</li>
+                        <li>A place where you can't hide or make excuses</li>
                     </ul>
                 </div>
             </div>
             
             <div class="wtif-closing">
-                <p>We're going to challenge you. We're going to push you out of your comfort zone. We're going to expect you to do the work between sessions.</p>
+                <p>We're going to challenge you. Push you out of your comfort zone. Expect you to do the work.</p>
                 <p>Because here's what we know:</p>
                 <p>You don't need more information. You need someone who believes in you more than you believe in yourself right now.</p>
-                <p>You need someone who's walked this path and knows it's possible.</p>
-                <p>You need accountability, frameworks, and the kind of honest feedback that changes lives.</p>
-                <p>That's what this is.</p>
-                <p>No victim stories. No endless analysis. No letting you hide behind "I'm not ready yet."</p>
+                <p>You need someone who's walked this path. You need accountability and honest feedback.</p>
+                <p>No victim stories. No endless analysis. No hiding behind "I'm not ready."</p>
                 <p>Just focused, practical, courageous work toward building the life you actually want.</p>
             </div>
         </div>
@@ -1455,9 +1475,9 @@
                 </div>
             </div>
             
-            <div class="cohort-highlight">
-                <p>NEXT COHORT: NOVEMBER 2025</p>
-                <p style="margin-top: 10px; font-size: 1.15em; font-weight: 700;">Applications reviewed on a rolling basis</p>
+            <div class="group-highlight">
+                <p>NEXT GROUP: NOVEMBER 2025</p>
+                <p style="margin-top: 10px; font-size: 1.15em; font-weight: 700;">For people who are done thinking about it</p>
             </div>
         </div>
     </section>
@@ -1506,9 +1526,9 @@
             <p>Keep researching. Keep planning. Keep thinking about it. Check back in a year and see if anything's changed. (Spoiler: It won't have.)</p>
             <p>Or decide that thinking time is over. Building starts now.</p>
             <p style="font-weight: 900; font-size: 1.6em;">Five years from now, you're going to arrive. The only question is where.</p>
-            <p style="font-size: 1.5em; margin-top: 45px; margin-bottom: 55px; font-weight: 900;"><strong>Next cohort starts November 2025. Limited seats available.</strong></p>
+            <p style="font-size: 1.5em; margin-top: 45px; margin-bottom: 55px; font-weight: 900;"><strong>Next group starts November 2025. Limited seats available.</strong></p>
             <a href="#" class="cta-button">Apply Now</a>
-            <p class="cta-note">Applications reviewed on a rolling basis. We're selective because we want people who are ready to do the work, not people who want to think about doing the work.</p>
+            <p class="cta-note">Spots are limited. We're selective because we want people who are ready to do the work, not people who want to think about doing the work.</p>
         </div>
     </section>
 
