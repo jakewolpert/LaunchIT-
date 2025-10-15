@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchIT! - Turn Your Expertise Into Income</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
+            padding: 160px 40px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(15, 118, 110, 0.12) 0%, transparent 70%);
+            top: -400px;
+            right: -200px;
+            border-radius: 50%;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+            bottom: -300px;
+            left: -100px;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 14px 32px;
+            font-weight: 800;
+            font-size: 1em;
+            letter-spacing: 1.5px;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+        }
+        
+        .hero h1 {
+            font-size: 5.5em;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 30px;
+            color: #0a0a0a;
+            letter-spacing: -0.03em;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5em;
+            color: #1f1f1f;
+            margin-bottom: 45px;
+            line-height: 1.5;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+        }
+        
+        .hero-meta {
+            display: inline-block;
+            background: #0f766e;
+            color: white;
+            padding: 16px 36px;
+            font-weight: 800;
+            font-size: 1.05em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            top: -250px;
+            left: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 70px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat {
+            animation: countUp 0.8s ease-out forwards;
+            animation-delay: calc(var(--delay) * 0.2s);
+            opacity: 0;
+        }
+        
+        .stat:nth-child(1) { --delay: 1; }
+        .stat:nth-child(2) { --delay: 2; }
+        .stat:nth-child(3) { --delay: 3; }
+        
+        .stat-number {
+            font-size: 5em;
+            font-weight: 900;
+            color: white;
+            display: block;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-label {
+            font-size: 1.15em;
+            color: white;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 110px 40px;
+        }
+        
+        .section-alt {
+            background: #fafafa;
+            position: relative;
+        }
+        
+        .section-dark {
+            background: #0a0a0a;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 3.8em;
+            font-weight: 900;
+            margin-bottom: 50px;
+            line-height: 1.1;
+            color: #0a0a0a;
+            letter-spacing: -0.03em;
+        }
+        
+        .section-dark h2 {
+            color: white;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+            letter-spacing: -0.02em;
+        }
+        
+        p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #2a2a2a;
+            margin-bottom: 22px;
+            font-weight: 500;
+        }
+        
+        .section-dark p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        strong {
+            font-weight: 900;
+            color: #0a0a0a;
+        }
+        
+        /* UPDATED Problem Section with closing quotes */
+        .problem-questions {
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ff 50%, #f0fdf4 100%);
+            padding: 65px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 70px rgba(168, 85, 247, 0.12);
+            border: 3px solid #e9d5ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-questions::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+        }
+        
+        .problem-questions p {
+            font-style: italic;
+            font-size: 1.3em;
+            color: #2a2a2a;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .problem-questions .quote {
+            color: #0f766e;
+            font-weight: 700;
+        }
+        
+        .problem-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .highlight-box {
+            background: #ecfdf5;
+            padding: 45px;
+            border-radius: 20px;
+            border: 4px solid #0f766e;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 900;
+            color: #0f766e;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Guides Section */
+        .guides-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 70px;
+            align-items: stretch;
+        }
+        
+        .guide-card {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+            border: 3px solid #e9d5ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.15);
+        }
+        
+        .guide-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #6b7280;
+            margin-bottom: 35px;
+            border: 3px solid #c084fc;
+        }
+        
+        .guide-name {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        
+        .guide-path {
+            font-size: 1.3em;
+            color: #0f766e;
+            font-weight: 900;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .guide-outcomes {
+            background: #ecfdf5;
+            padding: 35px;
+            border-radius: 16px;
+            margin: 30px 0;
+            border: 3px solid #0f766e;
+        }
+        
+        .guide-outcomes strong {
+            display: block;
+            color: #0f766e;
+            margin-bottom: 18px;
+            font-size: 1.2em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .guide-outcomes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .guide-outcomes li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .guide-outcomes li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: #0f766e;
+            font-weight: 900;
+            font-size: 1.8em;
+            line-height: 1;
+        }
+        
+        .guide-closing {
+            font-style: italic;
+            color: #4a4a4a;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+        
+        /* Client Results - Dark Section */
+        .client-results-dark {
+            background: #0a0a0a;
+            color: white;
+        }
+        
+        .client-results-dark h2 {
+            color: white;
+        }
+        
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .client-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .client-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .client-card h3 {
+            font-size: 1.25em;
+            margin-bottom: 18px;
+            color: #14b8a6;
+            font-weight: 900;
+        }
+        
+        .client-card p {
+            font-size: 1.05em;
+            margin: 0;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .client-pattern {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            padding: 55px;
+            border-radius: 24px;
+            text-align: center;
+            margin-top: 50px;
+            border: 3px solid #14b8a6;
+        }
+        
+        .client-pattern p {
+            color: white;
+            font-size: 1.3em;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        /* Program Section */
+        .program-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 70px;
+        }
+        
+        .week-card {
+            background: white;
+            margin-bottom: 35px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            border: 3px solid #e9d5ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .week-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 16px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .week-number {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 45px 25px;
+        }
+        
+        .week-num {
+            font-size: 6em;
+            font-weight: 900;
+            line-height: 1;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .week-label {
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+        
+        .week-content {
+            padding: 45px 50px;
+        }
+        
+        .week-title {
+            font-size: 2em;
+            font-weight: 900;
+            margin-bottom: 18px;
+            color: #0a0a0a;
+            letter-spacing: -0.02em;
+        }
+        
+        .week-description {
+            color: #2a2a2a;
+            line-height: 1.8;
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        /* Outcomes Grid */
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .outcome-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+            border: 3px solid #e9d5ff;
+            transition: all 0.3s;
+            position: relative;
+            animation: slideIn 0.6s ease-out forwards;
+            animation-delay: calc(var(--order) * 0.1s);
+            opacity: 0;
+        }
+        
+        .outcome-card:nth-child(1) { --order: 1; }
+        .outcome-card:nth-child(2) { --order: 2; }
+        .outcome-card:nth-child(3) { --order: 3; }
+        .outcome-card:nth-child(4) { --order: 4; }
+        
+        .outcome-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, #0f766e, #c084fc);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+        
+        .outcome-card:hover::before {
+            opacity: 1;
+        }
+        
+        .outcome-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.15);
+            border-color: transparent;
+        }
+        
+        .outcome-card h3 {
+            color: #0f766e;
+            margin-bottom: 18px;
+            font-weight: 900;
+            font-size: 2em;
+        }
+        
+        .outcome-card p {
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* UPDATED Who This Is For section */
+        .wtif-section {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wtif-section::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
+            top: -300px;
+            right: -100px;
+        }
+        
+        .wtif-box {
+            background: white;
+            padding: 55px;
+            border-radius: 28px;
+            margin-bottom: 45px;
+            border: 3px solid #e5e5e5;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .wtif-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.12);
+        }
+        
+        .wtif-box:first-child {
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+            border-color: #e9d5ff;
+        }
+        
+        .wtif-box h3 {
+            font-size: 2.5em;
+            margin-bottom: 35px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0f766e, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .wtif-box ul {
+            list-style: none;
+        }
+        
+        .wtif-box li {
+            padding: 20px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.2em;
+            line-height: 1.7;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .wtif-box li:hover {
+            padding-left: 45px;
+            color: #0f766e;
+        }
+        
+        .wtif-box li:last-child {
+            border-bottom: none;
+        }
+        
+        .wtif-box li:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            color: #0f766e;
+            font-weight: 900;
+            font-size: 1.8em;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .wtif-box li:hover:before {
+            transform: scale(1.3);
+        }
+        
+        .wtif-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            margin-top: 55px;
+        }
+        
+        .wtif-grid .wtif-box {
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ff 50%, #ecfdf5 100%);
+            border: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wtif-grid .wtif-box::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+            opacity: 0.05;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(1) {
+            border-color: #e9d5ff;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(1)::before {
+            background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+        }
+        
+        .wtif-grid .wtif-box:nth-child(1) h3 {
+            background: linear-gradient(135deg, #a855f7, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(1) li:before {
+            color: #a855f7;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(2) {
+            border-color: #0f766e;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(2)::before {
+            background: radial-gradient(circle, #0f766e 0%, transparent 70%);
+        }
+        
+        .wtif-grid .wtif-box:nth-child(2) h3 {
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .wtif-grid .wtif-box:nth-child(2) li:before {
+            color: #0f766e;
+        }
+        
+        .wtif-closing {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            padding: 65px;
+            border-radius: 28px;
+            margin-top: 65px;
+            text-align: center;
+            box-shadow: 0 20px 70px rgba(15, 118, 110, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wtif-closing::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+            top: -200px;
+            left: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .wtif-closing p {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .wtif-closing p:first-child {
+            font-size: 1.6em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: white;
+            padding: 50px;
+            margin-bottom: 35px;
+            border-radius: 24px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+            border: 3px solid #e9d5ff;
+        }
+        
+        .testimonial-text {
+            font-size: 1.35em;
+            line-height: 1.75;
+            font-style: italic;
+            color: #1a1a1a;
+            margin-bottom: 22px;
+            font-weight: 600;
+        }
+        
+        .testimonial-author {
+            font-weight: 900;
+            color: #0f766e;
+            font-size: 1.2em;
+        }
+        
+        /* Program Details */
+        .details-section {
+            background: #0a0a0a;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .details-section h2 {
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin: 60px 0 70px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .detail-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .detail-value {
+            font-size: 4em;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            color: #14b8a6;
+        }
+        
+        .detail-label {
+            font-size: 1.15em;
+            font-weight: 700;
+        }
+        
+        .includes-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 50px;
+            border-radius: 24px;
+            position: relative;
+            z-index: 2;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .includes-box h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 2.5em;
+            font-weight: 900;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .include-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            color: white;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+        
+        .include-check {
+            font-size: 1.6em;
+            font-weight: 900;
+            flex-shrink: 0;
+            color: #14b8a6;
+        }
+        
+        .include-text {
+            font-size: 1.1em;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+        
+        .cohort-highlight {
+            text-align: center;
+            margin-top: 55px;
+            padding: 35px;
+            background: rgba(20, 184, 166, 0.15);
+            border-radius: 16px;
+            border: 3px solid #14b8a6;
+        }
+        
+        .cohort-highlight p {
+            font-size: 1.5em;
+            font-weight: 900;
+            color: #14b8a6;
+            margin: 0;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            padding: 45px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+            border: 3px solid #e9d5ff;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 16px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .faq-question {
+            font-size: 1.6em;
+            font-weight: 900;
+            margin-bottom: 18px;
+            color: #0a0a0a;
+        }
+        
+        .faq-answer {
+            color: #2a2a2a;
+            line-height: 1.8;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 4.5em;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-section p {
+            color: white;
+            font-size: 1.35em;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #0a0a0a;
+            color: white;
+            padding: 28px 70px;
+            font-size: 1.5em;
+            font-weight: 900;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .cta-button:hover {
+            background: #1a1a1a;
+            transform: translateY(-4px);
+        }
+        
+        .cta-note {
+            font-size: 1.1em;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5em;
+            }
+            
+            h2 {
+                font-size: 2.8em;
+            }
+            
+            .stats-grid,
+            .guides-grid,
+            .wtif-grid,
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .week-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .client-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .includes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">For People Done Thinking About It</div>
+            <h1>You're Successful.<br>So Why Do You Feel Stuck?</h1>
+            <p class="hero-subtitle">LaunchIT! helps you discover and monetize your zone of genius turning your expertise into a real business in 4 weeks.</p>
+            <div class="hero-meta">Next Group Starting in November!</div>
+        </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-number">4 Months</span>
+                <div class="stat-label">Jake replicated his VP of Sales salary after launching</div>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6 Figures</span>
+                <div class="stat-label">Nikki's side business revenue while working full-time</div>
+            </div>
+            <div class="stat">
+                <span class="stat-number">25</span>
+                <div class="stat-label">Professionals coached through successful transitions</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="section-alt">
+        <div class="container">
+            <h2 style="text-align: center;">If You've Ever Thought These Things,<br>You're in the Right Place</h2>
+            
+            <div class="problem-content">
+                <div class="problem-questions">
+                    <p><span class="quote">"</span>I want to earn extra income, but I have no idea where to start.<span class="quote">"</span></p>
+                    <p><span class="quote">"</span>Can I actually turn these side clients into a real business?<span class="quote">"</span></p>
+                    <p><span class="quote">"</span>I know I'm good at what I do. How do I package this into something I can sell?<span class="quote">"</span></p>
+                    <p><span class="quote">"</span>I've been building this expertise for years. There has to be a way to monetize it on my own terms.<span class="quote">"</span></p>
+                    <p><span class="quote">"</span>I want to launch something, but every time I try to start, I get stuck.<span class="quote">"</span></p>
+                    <p><span class="quote">"</span>What would I even offer? And how would I price it?<span class="quote">"</span></p>
+                </div>
+                
+                <p>You're ready for something more. You know you have expertise people would pay for. You've been thinking about this for months, maybe years.</p>
+                
+                <p>But you don't know HOW to actually start. How to package what you know. How to price it. How to find your first client.</p>
+                
+                <div class="highlight-box">
+                    <p>And here's what nobody talks about: you feel guilty even thinking about building something for yourself.</p>
+                </div>
+                
+                <p>Guilty for wanting more when you already have a good job. Guilty for prioritizing yourself when you "should" be grateful. Guilty for even considering taking time away from your current role to build something on the side.</p>
+                
+                <p>So you stay quiet about it. You keep researching. You tell yourself you'll start "when the time is right."</p>
+                
+                <div class="highlight-box">
+                    <p>But the truth is: You're allowed to build something for yourself.</p>
+                </div>
+                
+                <p>Whether that's a side business while you keep your job, or a full-time leap into something new—you're allowed to want more. You're allowed to monetize your expertise. You're allowed to create options for yourself.</p>
+                
+                <p>The problem isn't that you lack the skills or the ideas.</p>
+                
+                <p><strong>The problem is that you're trying to figure this out alone, without a roadmap, while feeling guilty about the whole thing.</strong></p>
+                
+                <p>Here's what we've seen with the 25 professionals we've coached:</p>
+                
+                <p>They didn't need permission. They needed a plan. They needed someone who'd actually done it to show them how.</p>
+                
+                <p>They needed to stop feeling guilty about building something for themselves and start taking action.</p>
+                
+                <div class="highlight-box">
+                    <p>That's what this is. Support. Structure. Permission to prioritize yourself.</p>
+                </div>
+                
+                <p>Five years from now, you'll be five years older. Will you have built something that matters to you, or will you still be thinking about it?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">Meet Your Coaches:<br>Two Different Paths, Both Successful</h2>
+            
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <div class="guide-image">[Jake Wolpert Photo]</div>
+                    <div class="guide-name">Jake Wolpert</div>
+                    <div class="guide-path">The Leap</div>
+                    
+                    <p>Spent 10 years building toward CRO. Sales leader multiple times. Finally got the exact role he'd been chasing.</p>
+                    
+                    <p>And the moment he got it, he realized: <strong>he didn't actually want what he'd been working toward for a decade.</strong></p>
+                    
+                    <p><strong>He'd been so focused on climbing the ladder that he never stopped to ask if it was leaning against the right wall.</strong></p>
+                    
+                    <p>So he walked away. Started Peak Se7en (now ISH Sales Consulting). Helped companies transition beyond founder-led sales.</p>
+                    
+                    <div class="guide-outcomes">
+                        <strong>The Outcomes</strong>
+                        <ul>
+                            <li>Replicated his VP of Sales salary within 4 months of launching</li>
+                            <li>Built a consulting practice serving $7,500-10K/month clients</li>
+                            <li>Now splits his time between high-value consulting and coaching high-performers through strategic transitions</li>
+                            <li>Helping clients build the businesses and lives they actually want, not the ones they think they should want</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="guide-closing">The hardest part wasn't the leap. It was admitting the goal he'd been working toward wasn't his goal anymore.</p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-image">[Nikki Lang Photo]</div>
+                    <div class="guide-name">Nikki Lang</div>
+                    <div class="guide-path">The Build</div>
+                    
+                    <p>Head of Strategic Accounts who felt the same restlessness but wasn't ready to leap without a net.</p>
+                    
+                    <p>She watched colleagues burn out trying to "escape" corporate. Some succeeded. Many didn't. <strong>She knew there had to be a smarter way.</strong></p>
+                    
+                    <p>Instead of choosing between security and freedom, she refused to accept that trade-off. She built strategically while keeping her corporate role.</p>
+                    
+                    <p><strong>She proved you don't have to blow up your life to build something meaningful.</strong></p>
+                    
+                    <p>So she started small. Built her expertise into a service. Found her first clients. All while excelling in her day job.</p>
+                    
+                    <div class="guide-outcomes">
+                        <strong>The Outcomes</strong>
+                        <ul>
+                            <li>Built a 6-figure side business while working full-time</li>
+                            <li>Generated consistent monthly revenue without sacrificing her day job</li>
+                            <li>Created multiple income streams and options</li>
+                            <li>Now has the freedom to choose what's next on her terms, not out of desperation</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="guide-closing">She didn't wait for the perfect moment. She built the bridge while she was still standing on solid ground.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 60px; font-size: 1.4em; font-weight: 800; color: #0f766e;">Different situations. Different risk tolerances. Different approaches. Both got what they wanted.</p>
+            <p style="text-align: center; font-size: 1.4em; font-weight: 800; color: #0f766e;">Jake chose courage over comfort. Nikki chose strategy over speed.</p>
+            <p style="text-align: center; font-size: 1.7em; font-weight: 900; color: #0a0a0a; margin-top: 25px;">Which path is yours?</p>
+        </div>
+    </section>
+
+    <!-- Client Results - Dark Section -->
+    <section class="client-results-dark">
+        <div class="container">
+            <h2 style="text-align: center;">What Our Clients Have Built</h2>
+            <p style="text-align: center; font-size: 1.35em; color: rgba(255,255,255,0.8); margin-bottom: 60px; font-weight: 700;">Real transitions. Real results.</p>
+            
+            <div class="client-grid">
+                <div class="client-card">
+                    <h3>Sarah M.<br>Marketing Executive → Brand Consultant</h3>
+                    <p>Launched her consulting practice with three qualified prospects in her pipeline within 30 days. Now books $8K+ projects with confidence.</p>
+                </div>
+                
+                <div class="client-card">
+                    <h3>Marcus T.<br>Sales Leader → Revenue Advisor</h3>
+                    <p>Went from underpricing his expertise to landing his first $8K project using the pricing frameworks from Week 3. Now advises growth-stage companies on go-to-market strategy.</p>
+                </div>
+                
+                <div class="client-card">
+                    <h3>Jennifer K.<br>Product Manager → Strategic Advisor</h3>
+                    <p>Built a service offering she was proud of and started having real conversations with real prospects. No longer waiting for "perfect clarity" to take action.</p>
+                </div>
+            </div>
+            
+            <div class="client-pattern">
+                <p><strong>The Pattern:</strong> Our clients don't just learn frameworks. They build real businesses. They have real clients. They make real money.</p>
+                <p style="margin-top: 22px;"><strong>Most importantly: They stop performing success and start living it.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="program-intro">
+                <h2>Four Weeks. One Outcome:<br>A Service You Can Sell This Month.</h2>
+                <p style="font-size: 1.3em; font-weight: 700;">This isn't a course about "finding your passion." This isn't motivation or inspiration.</p>
+                <p style="font-size: 1.3em; font-weight: 700;">This is you building something concrete. A real service offering with clear value, confident pricing, and a pitch you can use immediately.</p>
+            </div>
+            
+            <div class="week-card">
+                <div class="week-number">
+                    <div class="week-num">1</div>
+                    <div class="week-label">Week</div>
+                </div>
+                <div class="week-content">
+                    <div class="week-title">Get Clear on What You Actually Want</div>
+                    <p class="week-description">Not what you think you should want. What you <em>actually</em> want. We identify the work that energizes you, the clients you want to serve, and the life you want to build. No more guessing.</p>
+                </div>
+            </div>
+            
+            <div class="week-card">
+                <div class="week-number">
+                    <div class="week-num">2</div>
+                    <div class="week-label">Week</div>
+                </div>
+                <div class="week-content">
+                    <div class="week-title">Build Your Service Offering</div>
+                    <p class="week-description">No vague consulting. No generic coaching. No "I help people with stuff." You package your expertise into a specific, valuable service that solves a real problem. Something concrete you can pitch this week.</p>
+                </div>
+            </div>
+            
+            <div class="week-card">
+                <div class="week-number">
+                    <div class="week-num">3</div>
+                    <div class="week-label">Week</div>
+                </div>
+                <div class="week-content">
+                    <div class="week-title">Price It and Pitch It</div>
+                    <p class="week-description">Price based on value delivered, not hours worked. Practice your pitch without feeling weird about it. Stop apologizing for your rates. Charge what you're worth.</p>
+                </div>
+            </div>
+            
+            <div class="week-card">
+                <div class="week-number">
+                    <div class="week-num">4</div>
+                    <div class="week-label">Week</div>
+                </div>
+                <div class="week-content">
+                    <div class="week-title">Present and Refine</div>
+                    <p class="week-description">Present your complete offering to the group. Get direct feedback from Jake and Nikki. Walk away with a refined service you can start selling tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">What You Walk Away With</h2>
+            
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <h3>A Sellable Service</h3>
+                    <p>Not a vague idea. A concrete offering with defined outcomes, clear pricing, and a pitch you've practiced and refined.</p>
+                </div>
+                
+                <div class="outcome-card">
+                    <h3>Your Strategic Path</h3>
+                    <p>Know whether to leap, build while working, or create a hybrid approach. Understand your risk tolerance and what actually fits your life.</p>
+                </div>
+                
+                <div class="outcome-card">
+                    <h3>Confident Pricing</h3>
+                    <p>Know exactly what to charge and why. No more undervaluing yourself or feeling weird about money conversations.</p>
+                </div>
+                
+                <div class="outcome-card">
+                    <h3>A Pitch That Works</h3>
+                    <p>You've practiced. You've gotten feedback. You're ready to have real conversations with real prospects without sounding desperate or apologetic.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 60px; font-size: 1.5em; font-weight: 800;">More importantly: You'll remember what it feels like to be excited about Monday mornings instead of dreading them.</p>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="wtif-section">
+        <div class="container">
+            <h2 style="text-align: center;">What Makes This Different</h2>
+            
+            <div class="wtif-box">
+                <h3>Who Should Apply</h3>
+                <ul>
+                    <li>You've achieved what you were supposed to achieve, and you're brave enough to admit it's not enough.</li>
+                    <li>You refuse to spend the next 20 years building someone else's vision while your dreams gather dust.</li>
+                    <li>You have expertise that could genuinely help people, but you've been too scared or stuck to figure out how to share it.</li>
+                    <li>You're done waiting for permission, for perfect timing, for more clarity. You're ready to build with what you have right now.</li>
+                    <li>You understand that transformation requires work, discomfort, and courage—and you're finally ready to do what it takes.</li>
+                </ul>
+            </div>
+            
+            <div class="wtif-grid">
+                <div class="wtif-box">
+                    <h3>What This ISN'T</h3>
+                    <ul>
+                        <li>Us talking at you for 90 minutes while you take notes and hope something sticks.</li>
+                        <li>Generic business advice that could apply to anyone, anywhere, doing anything.</li>
+                        <li>A recorded course you work through alone, wondering if you're doing it right.</li>
+                        <li>Surface-level motivation that feels good in the moment but changes nothing.</li>
+                        <li>A community of thousands where your questions get lost and your voice doesn't matter.</li>
+                    </ul>
+                </div>
+                
+                <div class="wtif-box">
+                    <h3>What This IS</h3>
+                    <ul>
+                        <li>A small group of ambitious professionals who are done waiting and ready to build.</li>
+                        <li>Direct, personalized feedback on your specific offering, your pricing, your pitch.</li>
+                        <li>Real frameworks from people who've actually made this transition—not theory from people who've only taught it.</li>
+                        <li>The accountability and support you need to do the thing you've been putting off.</li>
+                        <li>A place where you can't hide, can't make excuses, and can't stay comfortable.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="wtif-closing">
+                <p>We're going to challenge you. We're going to push you out of your comfort zone. We're going to expect you to do the work between sessions.</p>
+                <p>Because here's what we know:</p>
+                <p>You don't need more information. You need someone who believes in you more than you believe in yourself right now.</p>
+                <p>You need someone who's walked this path and knows it's possible.</p>
+                <p>You need accountability, frameworks, and the kind of honest feedback that changes lives.</p>
+                <p>That's what this is.</p>
+                <p>No victim stories. No endless analysis. No letting you hide behind "I'm not ready yet."</p>
+                <p>Just focused, practical, courageous work toward building the life you actually want.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-alt">
+        <div class="container">
+            <h2 style="text-align: center;">What People Are Saying</h2>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I went from 'someday I'll start something' to having three qualified prospects in my pipeline within a month of finishing. The frameworks weren't theoretical—I actually used them to land my first client."</p>
+                <p class="testimonial-author">— Sarah M.</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"The pricing strategy from Week 3 completely changed how I value my work. I landed my first $8K project when I would have charged half that before this program."</p>
+                <p class="testimonial-author">— Marcus T.</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Finally, someone who understood that I wasn't broken or lazy—I was just ready for something more. Jake and Nikki get it because they've actually lived it. No BS, just real experience."</p>
+                <p class="testimonial-author">— Jennifer K.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details -->
+    <section class="details-section">
+        <div class="container">
+            <h2>Program Details</h2>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="detail-value">4</span>
+                    <div class="detail-label">Weeks</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-value">90</span>
+                    <div class="detail-label">Minutes Per Session</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-value">Small</span>
+                    <div class="detail-label">Group Setting</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-value">$1,200</span>
+                    <div class="detail-label">Investment</div>
+                </div>
+            </div>
+            
+            <div class="includes-box">
+                <h3>What's Included</h3>
+                <div class="includes-grid">
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">4 live 90-minute group coaching sessions</span>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">Direct feedback from both Jake and Nikki</span>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">Complete service offering frameworks and templates</span>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">Pricing strategy worksheets and pitch practice tools</span>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">Private community for accountability and support</span>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-check">✓</span>
+                        <span class="include-text">All session recordings and materials</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cohort-highlight">
+                <p>NEXT COHORT: NOVEMBER 2025</p>
+                <p style="margin-top: 10px; font-size: 1.15em; font-weight: 700;">Applications reviewed on a rolling basis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-alt">
+        <div class="container" style="max-width: 950px;">
+            <h2 style="text-align: center;">Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need to quit my job to do this?</div>
+                <p class="faq-answer">No. This is specifically designed for people who want to build strategically without blowing up their life. Nikki built her entire 6-figure business while working full-time as Head of Strategic Accounts. Jake can help you think through the leap if that's your path. You choose based on your situation.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I don't know what my service should be yet?</div>
+                <p class="faq-answer">That's what Week 1 and 2 are for. We help you identify your expertise, understand what people will actually pay for, and package it into something concrete and sellable. You don't need to have it figured out before you start. That's the point of the program.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How much time does this require each week?</div>
+                <p class="faq-answer">Expect 2-3 hours per week for homework between sessions, plus the 90-minute live session. If you're not willing to invest 3-4 hours per week into building your future, this program isn't for you.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will I have clients by the end of the 4 weeks?</div>
+                <p class="faq-answer">You'll have everything you need to start selling—a clear offering, confident pricing, and a practiced pitch. Some participants land their first client during the program. Others land clients within weeks after. It depends on your network, your speed of execution, and how fast you take action on what you learn.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why keep the group small?</div>
+                <p class="faq-answer">Because we're not running a webinar factory. We give direct, personalized feedback to every participant on their specific offering, pricing, and pitch. That requires a small group. Quality over quantity.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What makes this different from other business programs?</div>
+                <p class="faq-answer">Your coaches have both actually done this. Jake made the leap and built fast. Nikki built strategically while working. You get both real perspectives, not theory. And we're focused on strategic transitions for already-successful people. Not generic business advice. Not "follow your passion" platitudes. Real frameworks for real transitions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container" style="max-width: 850px;">
+            <h2>Stop Thinking. Start Building.</h2>
+            <p>Keep researching. Keep planning. Keep thinking about it. Check back in a year and see if anything's changed. (Spoiler: It won't have.)</p>
+            <p>Or decide that thinking time is over. Building starts now.</p>
+            <p style="font-weight: 900; font-size: 1.6em;">Five years from now, you're going to arrive. The only question is where.</p>
+            <p style="font-size: 1.5em; margin-top: 45px; margin-bottom: 55px; font-weight: 900;"><strong>Next cohort starts November 2025. Limited seats available.</strong></p>
+            <a href="#" class="cta-button">Apply Now</a>
+            <p class="cta-note">Applications reviewed on a rolling basis. We're selective because we want people who are ready to do the work, not people who want to think about doing the work.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Questions? Email hello@launchit.com</p>
+    </footer>
+
+</body>
+</html>
