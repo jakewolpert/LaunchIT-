@@ -21,8 +21,32 @@
         
         .header {
             background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
-            padding: 60px 40px;
+            padding: 60px 40px 50px;
             text-align: center;
+            position: relative;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0f766e;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: transform 0.3s;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+        
+        .back-button::before {
+            content: "←";
+            font-size: 1.3em;
         }
         
         .header h1 {
@@ -243,6 +267,7 @@
 </head>
 <body>
     <div class="header">
+        <a href="index.html" class="back-button">Back to Home</a>
         <h1>Apply to LaunchIT!</h1>
         <p>November 2025 Group Application</p>
     </div>
@@ -259,6 +284,7 @@
         </div>
 
         <form action="https://formspree.io/f/xblzwzyz" method="POST">
+            <input type="hidden" name="_next" value="thank-you.html">
             <div class="form-group">
                 <label for="name">Full Name <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required>
@@ -326,7 +352,6 @@
 
             <div class="submit-section">
                 <button type="submit" class="submit-button">Submit Application</button>
-                <p class="submit-note">We'll review your application and get back to you within 2-3 business days.</p>
             </div>
         </form>
     </div>
