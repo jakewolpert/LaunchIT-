@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to LaunchIT! - November 2025 Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            background: #ffffff;
+        }
+        
+        .header {
+            background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            color: #1f1f1f;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .confidentiality {
+            background: #ecfdf5;
+            border: 3px solid #0f766e;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .confidentiality h2 {
+            font-size: 1.5em;
+            color: #0f766e;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .confidentiality p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+        
+        .form-intro {
+            margin-bottom: 40px;
+        }
+        
+        .form-intro h2 {
+            font-size: 2em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        
+        .form-intro p {
+            font-size: 1.15em;
+            color: #2a2a2a;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .form-group {
+            margin-bottom: 35px;
+        }
+        
+        label {
+            display: block;
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 10px;
+        }
+        
+        .required {
+            color: #0f766e;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.05em;
+            font-family: 'Outfit', sans-serif;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            font-weight: 500;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #0f766e;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .radio-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .radio-option label {
+            margin: 0;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .helper-text {
+            font-size: 0.95em;
+            color: #6b7280;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .submit-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #e5e5e5;
+        }
+        
+        .submit-button {
+            display: inline-block;
+            background: #0f766e;
+            color: white;
+            padding: 20px 60px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .submit-button:hover {
+            background: #0d5d56;
+            transform: translateY(-2px);
+        }
+        
+        .submit-note {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+        }
+        
+        footer a {
+            color: #14b8a6;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .header p {
+                font-size: 1.1em;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Apply to LaunchIT!</h1>
+        <p>November 2025 Group Application</p>
+    </div>
+
+    <div class="container">
+        <div class="confidentiality">
+            <h2>🔒 Your Information is Confidential</h2>
+            <p>We understand many applicants are currently employed and exploring options privately. Your information is completely confidential. We will never share your details or contact you in ways that could compromise your current situation.</p>
+        </div>
+
+        <div class="form-intro">
+            <h2>Tell Us About Yourself</h2>
+            <p>We're looking for professionals who are serious about turning their expertise into income. Take your time with these questions—they help us understand if LaunchIT! is the right fit for where you are right now.</p>
+        </div>
+
+        <form action="https://formspree.io/f/xblzwzyz" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile URL <span class="required">*</span></label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="current-situation">What's your current professional situation? <span class="required">*</span></label>
+                <textarea id="current-situation" name="current-situation" required></textarea>
+                <p class="helper-text">Tell us about your current role, company size, years of experience, etc.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="expertise">What expertise do you want to monetize? <span class="required">*</span></label>
+                <textarea id="expertise" name="expertise" required></textarea>
+                <p class="helper-text">What do you know that people would pay for?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="journey">Where are you in your journey? <span class="required">*</span></label>
+                <textarea id="journey" name="journey" required></textarea>
+                <p class="helper-text">Have you started exploring this? Had conversations? Built anything? Or are you at the very beginning?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="why-now">Why now? What's changed that makes this the right time? <span class="required">*</span></label>
+                <textarea id="why-now" name="why-now" required></textarea>
+                <p class="helper-text">What's the inflection point you're experiencing?</p>
+            </div>
+
+            <div class="form-group">
+                <label>Can you commit 4-6 hours per week for 4 weeks? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="commit-yes" name="commitment" value="yes" required>
+                        <label for="commit-yes">Yes, I can commit</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="commit-no" name="commitment" value="no" required>
+                        <label for="commit-no">No, that's too much right now</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="obstacle">What's your biggest obstacle right now? <span class="required">*</span></label>
+                <textarea id="obstacle" name="obstacle" required></textarea>
+                <p class="helper-text">What's keeping you stuck?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="additional">Anything else you want us to know?</label>
+                <textarea id="additional" name="additional"></textarea>
+                <p class="helper-text">Optional—but if there's something important we should know, tell us here.</p>
+            </div>
+
+            <div class="submit-section">
+                <button type="submit" class="submit-button">Submit Application</button>
+                <p class="submit-note">We'll review your application and get back to you within 2-3 business days.</p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Questions? Email <a href="mailto:hello@launchit.com">hello@launchit.com</a></p>
+        <p style="margin-top: 10px;"><a href="index.html">← Back to Home</a></p>
+    </footer>
+</body>
+</html>
