@@ -88,11 +88,20 @@
             font-size: 1.5em;
             color: #1f1f1f;
             margin-bottom: 45px;
-            line-height: 1.5;
+            line-height: 1.6;
             max-width: 850px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 600;
+        }
+        
+        .hero-subtitle-line {
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle-line:last-child {
+            margin-bottom: 0;
         }
         
         .hero-meta {
@@ -125,6 +134,14 @@
         .hero-cta:hover {
             background: #0d5d56;
             transform: translateY(-2px);
+        }
+        
+        .hero-cta-secondary {
+            display: block;
+            margin-top: 15px;
+            font-size: 1em;
+            color: #0f766e;
+            font-weight: 600;
         }
         
         /* Stats Bar */
@@ -1082,8 +1099,14 @@
     <div class="hero">
         <div class="hero-content">
             <h1>You're Successful.<br>So Why Do You Feel Stuck?</h1>
-            <p class="hero-subtitle">LaunchIT! You've built the expertise. Now monetize it. A 4-week intensive for professionals at inflection points. Create your offering, set your pricing, choose your path.</p>
-            <a href="#" class="hero-cta">Join the November Group</a>
+            <div class="hero-subtitle">
+                <span class="hero-subtitle-line">You've built the expertise, now monetize it.</span>
+                <span class="hero-subtitle-line">LaunchIT! is a 4-week intensive designed for professionals who want more.</span>
+                <span class="hero-subtitle-line">Create your offering, set your pricing, choose your path.</span>
+                <span class="hero-subtitle-line">With the right support, you are closer to launching it than you think.</span>
+            </div>
+            <a href="apply.html" class="hero-cta">Get Unstuck</a>
+            <div class="hero-cta-secondary">Join the November Group</div>
         </div>
     </div>
 
