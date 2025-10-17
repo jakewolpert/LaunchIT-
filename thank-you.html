@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received - LaunchIT!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #ecfdf5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            border: 3px solid #0f766e;
+        }
+        
+        .checkmark::after {
+            content: "✓";
+            font-size: 3em;
+            color: #0f766e;
+            font-weight: 900;
+        }
+        
+        h1 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #2a2a2a;
+            margin-bottom: 40px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .quote-box {
+            background: #fefbff;
+            border: 3px solid #d8b4fe;
+            padding: 35px;
+            margin: 40px 0;
+            border-radius: 12px;
+        }
+        
+        .quote-text {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .quote-author {
+            font-size: 1.1em;
+            color: #0f766e;
+            font-weight: 700;
+        }
+        
+        .next-steps {
+            background: #ecfdf5;
+            border: 3px solid #0f766e;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .next-steps h2 {
+            font-size: 1.5em;
+            color: #0f766e;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .next-steps p {
+            font-size: 1.1em;
+            color: #0a0a0a;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .home-button {
+            display: inline-block;
+            background: #0f766e;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .home-button:hover {
+            background: #0d5d56;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .quote-text {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark"></div>
+        
+        <h1>Application Received!</h1>
+        
+        <p class="subtitle">Thank you for taking the first step. You've done the hardest part.</p>
+        
+        <div class="quote-box">
+            <p class="quote-text">"The most difficult thing is the decision to act, the rest is merely tenacity."</p>
+            <p class="quote-author">— Amelia Earhart</p>
+        </div>
+        
+        <div class="next-steps">
+            <h2>What Happens Next?</h2>
+            <p>We'll carefully review your application and get back to you within 48 hours. Keep an eye on your inbox (and check your spam folder, just in case).</p>
+        </div>
+        
+        <a href="index.html" class="home-button">Return to Home</a>
+    </div>
+</body>
+</html>
