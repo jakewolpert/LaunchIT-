@@ -78,7 +78,7 @@
         .photo-placeholder {
             width: 100%;
             max-width: 500px;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 4 / 5;
             background: white;
             border-radius: 20px;
             display: flex;
@@ -89,6 +89,7 @@
             font-size: 1.2em;
             color: #6b7280;
             font-weight: 600;
+            overflow: hidden;
         }
         
         .value-prop {
@@ -283,7 +284,9 @@
         
         <p class="tagline">Now they're pulling back the curtain.</p>
         
-        <div class="photo-placeholder">[Jake & Nikki Photo]</div>
+        <div class="photo-placeholder">
+            <img src="jake-nikki-photo.jpg" alt="Jake and Nikki" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+        </div>
         
         <div class="divider"></div>
         
