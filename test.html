@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchIT! Labs - Subscribe</title>
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:title" content="LaunchIT! Labs - Turn Your Expertise Into Income">
+    <meta property="og:description" content="Nikki built a six-figure side hustle while working full-time. Jake left his VP role and replaced his salary in six months.">
+    <meta property="og:image" content="https://nowlaunch.it/launchit-labs-logo.png">
+    <meta property="og:url" content="https://nowlaunch.it">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nowlaunch.it/launchit-labs-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Onest', sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: 'Onest', sans-serif;
+            font-size: 3em;
+            font-weight: 900;
+            color: #0a0a0a;
+            margin-bottom: 60px;
+            letter-spacing: -0.02em;
+        }
+        
+        .intro {
+            font-size: 1.7em;
+            font-weight: 700;
+            color: #0a0a0a;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .highlight {
+            background: linear-gradient(180deg, transparent 0%, rgba(20, 184, 166, 0.25) 30%, rgba(20, 184, 166, 0.35) 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #0a0a0a;
+            display: inline;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%);
+            margin: 40px auto;
+            border-radius: 2px;
+        }
+        
+        .tagline {
+            font-family: 'Onest', sans-serif;
+            font-size: 1.3em;
+            font-weight: 800;
+            color: #0a0a0a;
+            margin-bottom: 50px;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 4 / 5;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 50px;
+            border: 3px solid #d8b4fe;
+            font-size: 1.2em;
+            color: #6b7280;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        
+        .value-prop {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .cta-text {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+        
+        .signup-box {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+            border: 3px solid #d8b4fe;
+        }
+        
+        .signup-box h2 {
+            font-family: 'Onest', sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #0a0a0a;
+            letter-spacing: -0.01em;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 1.1em;
+            font-family: 'Onest', sans-serif;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            font-weight: 500;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #0f766e;
+        }
+        
+        input[type="email"]::placeholder {
+            color: #9ca3af;
+        }
+        
+        .subscribe-button {
+            width: 100%;
+            background: #0f766e;
+            color: white;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Onest', sans-serif;
+            margin-top: 10px;
+        }
+        
+        .subscribe-button:hover {
+            background: #0d5d56;
+            transform: translateY(-2px);
+        }
+        
+        .privacy-note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2em;
+            }
+            
+            .intro {
+                font-size: 1.3em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            .value-prop {
+                font-size: 1.15em;
+            }
+            
+            .signup-box {
+                padding: 35px 25px;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #0a0a0a;
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 1.1em;
+            font-family: 'Onest', sans-serif;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #0f766e;
+        }
+        
+        #success-message {
+            display: none;
+            text-align: center;
+        }
+        
+        #success-message h2 {
+            font-family: 'Onest', sans-serif;
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #0f766e;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        #success-message p {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">LaunchIT! Labs</div>
+        
+        <p class="intro">Nikki built a <span class="highlight">six-figure side hustle</span> while working full-time. Jake left his VP role and <span class="highlight">replaced his salary</span> in six months.</p>
+        
+        <div class="divider"></div>
+        
+        <p class="tagline">Now they're pulling back the curtain.</p>
+        
+        <div class="photo-placeholder">
+            <img src="jake-nikki-photo.jpg" alt="Jake and Nikki" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p class="value-prop"><strong>And sharing the strategies, learnings, and frameworks that made it possible.</strong></p>
+        
+        <p class="value-prop"><strong>Join below if you want in.</strong></p>
+        
+        <div class="divider"></div>
+        
+        <div class="signup-box">
+            <form id="signup-form" action="https://formspree.io/f/xblzwzyz" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                <button type="submit" class="subscribe-button">LaunchIT!</button>
+            </form>
+            <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
+            
+            <div id="success-message">
+                <h2>🎉 Congratulations! You Just Took Control of Your Future.</h2>
+                <p>You're not waiting anymore. You're building. Watch Nikki's message below and get ready to turn your expertise into real income.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/rKFEp4VfXOg" title="LaunchIT! Labs Welcome Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Submit the form data using fetch
+            fetch(this.action, {
+                method: this.method,
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Hide the form
+                    document.getElementById('signup-form').style.display = 'none';
+                    document.querySelector('.privacy-note').style.display = 'none';
+                    
+                    // Show success message with video
+                    document.getElementById('success-message').style.display = 'block';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem submitting your form. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
