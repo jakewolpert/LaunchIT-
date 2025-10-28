@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaunchIT! Labs - Subscribe</title>
+    <title>LaunchIT! Labs - Subscribe (TEST)</title>
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="LaunchIT! Labs - Turn Your Expertise Into Income">
     <meta property="og:description" content="Nikki built a six-figure side hustle while working full-time. Jake left his VP role and replaced his salary in six months.">
@@ -108,14 +108,6 @@
             line-height: 1.5;
         }
         
-        .cta-text {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #0a0a0a;
-            margin-bottom: 50px;
-            line-height: 1.5;
-        }
-        
         .signup-box {
             background: white;
             padding: 35px;
@@ -133,51 +125,9 @@
             letter-spacing: -0.01em;
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        input[type="email"] {
-            width: 100%;
-            padding: 18px 20px;
-            font-size: 1.1em;
-            font-family: 'Onest', sans-serif;
-            border: 2px solid #e5e5e5;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-            font-weight: 500;
-        }
-        
-        input[type="email"]:focus {
-            outline: none;
-            border-color: #0f766e;
-        }
-        
-        input[type="email"]::placeholder {
-            color: #9ca3af;
-        }
-        
-        .subscribe-button {
-            width: 100%;
-            background: #0f766e;
-            color: white;
-            padding: 20px;
-            font-size: 1.2em;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            font-family: 'Onest', sans-serif;
-            margin-top: 10px;
-        }
-        
-        .subscribe-button:hover {
-            background: #0d5d56;
-            transform: translateY(-2px);
+        .beehiiv-form-wrapper {
+            margin: 0 auto;
+            max-width: 500px;
         }
         
         .privacy-note {
@@ -208,78 +158,6 @@
                 padding: 35px 25px;
             }
         }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #0a0a0a;
-            font-size: 1em;
-            text-align: left;
-        }
-        
-        input[type="text"] {
-            width: 100%;
-            padding: 18px 20px;
-            font-size: 1.1em;
-            font-family: 'Onest', sans-serif;
-            border: 2px solid #e5e5e5;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        
-        input[type="text"]:focus {
-            outline: none;
-            border-color: #0f766e;
-        }
-        
-        #success-message {
-            display: none;
-            text-align: center;
-        }
-        
-        #success-message h2 {
-            font-family: 'Onest', sans-serif;
-            font-size: 2.2em;
-            font-weight: 800;
-            color: #0f766e;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        
-        #success-message p {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #0a0a0a;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 12px;
-            margin-top: 30px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
     </style>
 </head>
 <body>
@@ -305,55 +183,16 @@
         <div class="divider"></div>
         
         <div class="signup-box">
-    <h2>Join the Newsletter</h2>
-    
-    <!-- BEEHIIV FORM -->
-    <div class="beehiiv-form-wrapper">
-        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-        <iframe src="https://subscribe-forms.beehiiv.com/66b6cdd0-5c79-44c5-b293-e1a8c41ad356" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 280px; margin: 0; border-radius: 8px !important; background-color: transparent;"></iframe>
-    </div>
-    
-    <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
+            <h2>Join the Newsletter</h2>
             
-            <div id="success-message">
-                <h2>🎉 Congratulations! You Just Took Control of Your Future.</h2>
-                <p>You're not waiting anymore. You're building. Watch Nikki's message below and get ready to turn your expertise into real income.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/rKFEp4VfXOg" title="LaunchIT! Labs Welcome Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            <!-- BEEHIIV FORM -->
+            <div class="beehiiv-form-wrapper">
+                <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+                <iframe src="https://subscribe-forms.beehiiv.com/66b6cdd0-5c79-44c5-b293-e1a8c41ad356" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; height: 280px; margin: 0; border-radius: 8px !important; background-color: transparent;"></iframe>
             </div>
+            
+            <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
         </div>
     </div>
-    
-    <script>
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Submit the form data using fetch
-            fetch(this.action, {
-                method: this.method,
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Hide the form
-                    document.getElementById('signup-form').style.display = 'none';
-                    document.querySelector('.privacy-note').style.display = 'none';
-                    
-                    // Show success message with video
-                    document.getElementById('success-message').style.display = 'block';
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was a problem submitting your form. Please try again.');
-            });
-        });
-    </script>
 </body>
 </html>
