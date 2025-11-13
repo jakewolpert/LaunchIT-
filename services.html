@@ -78,6 +78,16 @@
             margin: 0 auto;
         }
         
+        .highlight {
+            background: linear-gradient(180deg, transparent 0%, rgba(20, 184, 166, 0.25) 30%, rgba(20, 184, 166, 0.35) 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #0a0a0a;
+            display: inline;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -297,7 +307,7 @@
     
     <div class="hero">
         <h1 class="hero-title">Work With Us</h1>
-        <p class="hero-subtitle">When you need someone who's actually been there</p>
+        <p class="hero-subtitle">When you need someone who's <span class="highlight">actually been there</span></p>
     </div>
     
     <div class="container">
