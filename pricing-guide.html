@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5E4YD27419"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-5E4YD27419');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Should I Charge? - LaunchIT! Labs</title>
+    <meta property="og:title" content="What Should I Charge? A Practical Guide to Pricing">
+    <meta property="og:description" content="A practical guide to pricing when you have no idea where to start">
+    <meta property="og:image" content="https://nowlaunch.it/launchit-labs-logo.png">
+    <meta property="og:url" content="https://nowlaunch.it/pricing-guide">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Onest', sans-serif;
+            line-height: 1.8;
+            color: #0a0a0a;
+            background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
+            min-height: 100vh;
+        }
+        
+        .header {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: 'Onest', sans-serif;
+            font-size: 2em;
+            font-weight: 900;
+            color: #0a0a0a;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .logo:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+        
+        .guide-content {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+            border: 3px solid #d8b4fe;
+        }
+        
+        .guide-title {
+            font-size: 3em;
+            font-weight: 900;
+            color: #0a0a0a;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .guide-subtitle {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 50px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%);
+            margin: 50px 0;
+            border-radius: 2px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            font-weight: 800;
+            color: #0a0a0a;
+            margin: 50px 0 25px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 40px 0 20px;
+            line-height: 1.3;
+        }
+        
+        p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        p strong {
+            font-weight: 800;
+            color: #0a0a0a;
+        }
+        
+        p em {
+            font-style: italic;
+            color: #666;
+        }
+        
+        ul, ol {
+            margin: 25px 0 25px 30px;
+            font-size: 1.15em;
+            line-height: 1.8;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 15px;
+        }
+        
+        .example-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #14b8a6;
+        }
+        
+        .example-box p {
+            margin-bottom: 15px;
+        }
+        
+        .example-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0 0;
+        }
+        
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .newsletter-btn {
+            display: inline-block;
+            background: white;
+            color: #0f766e;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.3em;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            letter-spacing: -0.02em;
+            margin-top: 20px;
+        }
+        
+        .newsletter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .guide-content {
+                padding: 40px 30px;
+            }
+            
+            .guide-title {
+                font-size: 2em;
+            }
+            
+            .guide-subtitle {
+                font-size: 1.4em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            p, ul, ol {
+                font-size: 1.05em;
+            }
+            
+            .cta-section {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo">LaunchIT! Labs</a>
+    </div>
+    
+    <div class="container">
+        <div class="guide-content">
+            <h1 class="guide-title">What Should I Charge?</h1>
+            <p class="guide-subtitle">A Practical Guide to Pricing When You Have No Idea Where to Start</p>
+            
+            <div class="divider"></div>
+            
+            <h2>The Moment It All Goes Sideways</h2>
+            
+            <p>You had an idea. A service you could offer. Something you're legitimately good at—you've done it for years in your corporate role, people always come to you for help with it, and you're pretty sure you could help others with the same problem.</p>
+            
+            <p>So you started testing the waters. Mentioned it to a few people. Posted something on LinkedIn. Had a few conversations.</p>
+            
+            <p>And things moved faster than you expected. Because guess what? You actually are an expert. People need what you know.</p>
+            
+            <p>Now you're on a call with someone who seems genuinely interested:</p>
+            
+            <p>"So you'd help coach our sales team?"</p>
+            
+            <p>"Yeah, exactly. I'd start with your weekly sessions, then—"</p>
+            
+            <p>"This is exactly what we need. When could you start?"</p>
+            
+            <p>"Um, pretty quickly. I could probably—"</p>
+            
+            <p>"Great. What's your pricing?"</p>
+            
+            <p>And suddenly your brain goes completely blank.</p>
+            
+            <p><em>What do I charge? What if I say something too high and they laugh? What if I say something too low and leave money on the table? What's the right number? Is there a right number? Oh god, they're waiting for me to answer.</em></p>
+            
+            <p>"Well, I'd need to put together a proposal and, uh, I'll send you something by end of week?"</p>
+            
+            <p>The call ends. You panic. You have no idea what number to write down.</p>
+            
+            <p>Sound familiar?</p>
+            
+            <p>Or maybe it goes slightly different. You actually quote a number. They seem interested. Then they start asking about extras:</p>
+            
+            <p>"Could you also join our weekly team meetings?"</p>
+            
+            <p><em>I mean, I guess? That wasn't part of what I was thinking, but I don't want to lose this...</em></p>
+            
+            <p>"Sure, I could do that."</p>
+            
+            <p>"And maybe review our team's sales calls?"</p>
+            
+            <p><em>That's going to add like 10 hours a week, but they seem ready to say yes...</em></p>
+            
+            <p>"Yeah, we can figure that out."</p>
+            
+            <p>If you've been there, you're not alone. Basically everyone who's gone solo has had some version of this conversation where they realize they have no framework for pricing and they're just making it up in real-time.</p>
+            
+            <p>The good news is you can figure this out. The market will teach you. But first, let's make sure you don't make the mistakes that basically everyone makes.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>Why This Is Harder Than It Should Be</h2>
+            
+            <p>When you look for a job, figuring out what you're worth is relatively straightforward. There are salary bands, market data, recruiters who tell you the market rate. You might negotiate, but the range is defined.</p>
+            
+            <p>When you go out on your own, most of that structure disappears. There's no market data for "fractional sales consultant" or "leadership coach working 10 hours a week." You're on your own.</p>
+            
+            <p>And that lack of data would be fine if the only challenge was research. But there's a second problem that's harder to talk about:</p>
+            
+            <p><strong>You have to own being an expert.</strong></p>
+            
+            <p>You're probably really good at what you do. You've been doing it for years. People come to you for help with this stuff all the time. You legitimately know things others don't.</p>
+            
+            <p>But saying "I have specialized knowledge that's valuable and I'm going to charge for it" feels uncomfortable. Presumptuous, even. Like you're being arrogant.</p>
+            
+            <p>You're not. You're just doing what every consultant, coach, and business does: exchanging expertise for money.</p>
+            
+            <p>But that psychological hurdle is real. It's why so many smart, capable people undercharge—not because they lack data, but because owning their expertise feels weird.</p>
+            
+            <p>Here's what helps: your pricing will change. Probably multiple times. Even big companies adjust pricing constantly. The goal isn't to find the perfect number on your first try. The goal is to start with something reasonable and let the market tell you if you're close.</p>
+            
+            <p>But to do that, you need to avoid the mistakes that basically everyone makes.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>The Five Ways Everyone Screws Up Pricing</h2>
+            
+            <h3>Mistake #1: The Salary Conversion</h3>
+            
+            <p>You take your old salary, divide by 2,000 hours, add maybe 20%, and call that your hourly rate.</p>
+            
+            <p>$100K salary ÷ 2,000 hours = $50/hour. Add 20% = $60/hour. Done.</p>
+            
+            <p>Here's the problem: you're pricing yourself as a generalist employee when you're now a specialized expert.</p>
+            
+            <p>When you had a job, you were paid to do whatever they needed. Attend meetings, write reports, handle projects, respond to emails. Your value was your availability and your ability to do a range of tasks.</p>
+            
+            <p>Now? You're being hired to solve a specific problem they can't solve themselves. That's worth more than general availability.</p>
+            
+            <h3>Mistake #2: The Guilt Discount</h3>
+            
+            <p>You calculate what you should charge, then immediately cut it because "you're new" or "building your portfolio" or "these are good people who can't afford full price."</p>
+            
+            <p>When you undercharge, you attract clients who choose you based on price. These are the clients who will question every expense, ask for constant additions to scope, and treat you like you should be grateful they're paying you anything.</p>
+            
+            <h3>Mistake #3: Charging for Face Time Only</h3>
+            
+            <p>You bill for the 8 hours you spent in meetings with the client. You donate the 15 hours of prep, research, follow-up, and documentation work for free.</p>
+            
+            <p>You just volunteered half your time because you only charged for the visible part of the work. The client got value from all 23 hours. But you only got paid for 8.</p>
+            
+            <h3>Mistake #4: Racing to the Bottom</h3>
+            
+            <p>You look at what competitors charge, then price yourself lower to "be competitive."</p>
+            
+            <p>You're assuming your competitors priced intelligently. They probably didn't. You're copying someone else's mistake.</p>
+            
+            <p>Also, competing on price means you attract people who will leave you the second they find someone cheaper.</p>
+            
+            <h3>Mistake #5: Frankensteining Your Service</h3>
+            
+            <p>You quote a price. The client likes it but asks "Could you also do X? And Y? And maybe Z?"</p>
+            
+            <p>You say yes to everything because you don't want to lose the deal.</p>
+            
+            <p>Now your service that was supposed to take 10 hours a week is actually 25 hours, but you're still charging for 10. You've destroyed your margins and set yourself up to resent the work.</p>
+            
+            <p>Your offer should be compelling because of the core value it creates, not because you're including everything plus the kitchen sink.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>What to Do Instead: The Two Models That Work</h2>
+            
+            <p>You've got two real options: charge for your time or charge for deliverables. Both can work. They just work for different situations.</p>
+            
+            <p>Your pricing will evolve. You might start with one model and move to the other. Or do both for different types of clients. Companies change their pricing models all the time. You can too.</p>
+            
+            <h3>Model 1: Charge for Your Time (Hourly)</h3>
+            
+            <p><strong>Use this when:</strong> Most of your value is delivered in real-time interaction with the client.</p>
+            
+            <p>Think: coaching sessions, strategy calls, advisory work, team trainings, ongoing relationships where scope will evolve.</p>
+            
+            <p><strong>How it works:</strong> You charge for each hour you work. Simple, transparent, flexible.</p>
+            
+            <p><strong>Example:</strong> Four coaching sessions at $200/session = $800 package. Or team training at $250/hour for a 3-hour workshop = $750.</p>
+            
+            <p><strong>Why clients like it:</strong> Flexibility. They can scale up or down based on needs.</p>
+            
+            <p><strong>Why you might like it:</strong> Easy to explain. If scope changes, you bill for the additional time.</p>
+            
+            <p><strong>The catch:</strong> You need to charge for ALL your time, not just client-facing time. If you spend 3 hours prepping for a 1-hour session, you either bill 4 hours total or your rate needs to absorb that prep time.</p>
+            
+            <h3>Model 2: Charge for Deliverables (Project-Based)</h3>
+            
+            <p><strong>Use this when:</strong> You're delivering a specific outcome and significant work happens outside of client meetings.</p>
+            
+            <p>Think: building systems, strategy development, anything with defined scope and deliverables.</p>
+            
+            <p><strong>How it works:</strong> You quote a fixed price for a defined outcome. Doesn't matter if it takes you 20 hours or 40 hours. The price stays the same.</p>
+            
+            <p><strong>The math:</strong> Estimate total time (meetings + prep + execution + buffer), multiply by your hourly rate, round to a clean number, present as fixed investment.</p>
+            
+            <div class="example-box">
+                <p><strong>Example:</strong></p>
+                <ul>
+                    <li>12 hours of client meetings</li>
+                    <li>20 hours of strategy development</li>
+                    <li>30 hours of execution</li>
+                    <li>Total: 62 hours × $175/hour = $10,850</li>
+                    <li>Package as: $11,000 for 90-day project</li>
+                </ul>
+            </div>
+            
+            <p><strong>Why clients like it:</strong> No surprise bills. They know the total cost upfront.</p>
+            
+            <p><strong>Why you should like it:</strong> If you get efficient at delivery, you make more per hour. You're rewarded for being good at what you do.</p>
+            
+            <p><strong>The catch:</strong> You need to be good at estimating time and setting clear boundaries about what's included.</p>
+            
+            <h3>Set a Minimum (Even When You're Tempted Not To)</h3>
+            
+            <p>If you're building this as a side hustle, you'll be tempted to take anything. Someone offers you $500 for a project? You'll think "that's $500 I didn't have yesterday."</p>
+            
+            <p>Don't do it.</p>
+            
+            <p>Here's the reality: you can't build a sustainable business with a bunch of $500 clients. The math doesn't work. You'd need 20 of them just to make $10K. That's 20 different sales conversations, 20 onboarding processes, 20 sets of expectations to manage, 20 invoices to send.</p>
+            
+            <p>You'll spend more time managing clients than actually doing the work you're good at.</p>
+            
+            <p>Whether you're charging hourly or project-based, set a minimum engagement. Maybe it's $1,500. Maybe it's $3,000. Maybe it's $5,000. Whatever makes sense for your expertise and the time required to actually create value.</p>
+            
+            <p>This isn't about being greedy. It's about respecting what you know.</p>
+            
+            <p>Your minimum does two things: it filters out people who aren't serious, and it ensures every engagement is actually worth your time.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>How to Actually Price Your Service</h2>
+            
+            <h3>Start with Value</h3>
+            
+            <p>What problem are you solving? Not the surface problem, the real one.</p>
+            
+            <p>You're not "helping them with marketing." You're generating $100K in new pipeline so they hit their revenue targets.</p>
+            
+            <p>That's the value. That's what they're buying.</p>
+            
+            <p>Ask yourself:</p>
+            <ul>
+                <li>What does this problem cost them if unsolved?</li>
+                <li>What would they pay someone else to fix it?</li>
+                <li>What's the ROI if your solution works?</li>
+            </ul>
+            
+            <p>If you're solving a $100K problem, charging $10K is reasonable. That's a 10x return.</p>
+            
+            <p>If you're solving a $10K problem, charging $10K doesn't make sense.</p>
+            
+            <h3>Use Benchmarks</h3>
+            
+            <p>There's no good data on fractional rates. But here are guardrails:</p>
+            
+            <ul>
+                <li><strong>Experienced consultant/coach:</strong> $150-250/hour</li>
+                <li><strong>Specialized expert:</strong> $250-400+/hour</li>
+                <li><strong>Strategic advisor/fractional executive:</strong> $300-500+/hour</li>
+            </ul>
+            
+            <p>If you're charging $50/hour for expert-level work, you're leaving money on the table. If you're charging $500/hour for something anyone could do, you're overpriced.</p>
+            
+            <h3>Remember the Context</h3>
+            
+            <p>The company is probably comparing your price to hiring a full-time employee.</p>
+            
+            <p>If they'd need a $120K/year employee to solve this problem, and you're quoting $15K for a 3-month project, you're not expensive. You're a bargain.</p>
+            
+            <p>Your $15K might feel like a lot to you. To them, it's 12.5% of what a full-time hire costs for the year. And you'll probably solve it faster.</p>
+            
+            <h3>Say It Confidently</h3>
+            
+            <p>Practice saying your price out loud.</p>
+            
+            <p>"The investment for this is $7,500."</p>
+            
+            <p>Say it until it feels natural. Because the first time you say it to a real prospect, you need to say it with confidence, not apologetically.</p>
+            
+            <h3>Test With Real People</h3>
+            
+            <p>Quote it to real prospects and see what happens.</p>
+            
+            <p>But remember: people rejecting your price doesn't automatically mean your pricing is wrong.</p>
+            
+            <p>Maybe they don't see the value yet—that's a positioning problem, not a pricing problem.</p>
+            
+            <p>Maybe they're just not the right fit—some people genuinely can't afford what you charge.</p>
+            
+            <p>Maybe your price is fine and they're not ready to commit.</p>
+            
+            <p>Don't immediately drop your price because a few people said no. If 10 people in a row say no, okay, you've learned something. If 2 people say no and 1 says yes, you're probably fine.</p>
+            
+            <p>The market will tell you if you're in the ballpark. Give it enough data to actually tell you something useful.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>What Actually Happens Next</h2>
+            
+            <p>Your first price will probably get adjusted. That's fine. Every business adjusts pricing as they learn.</p>
+            
+            <p>The goal isn't to find the perfect price on day one. The goal is to start with something reasonable based on value, test it with real people, and adjust based on what you learn.</p>
+            
+            <p>Your pricing isn't carved in stone. It's a hypothesis you're testing.</p>
+            
+            <p>So here's what you do:</p>
+            
+            <ol>
+                <li>Think about the value you're creating</li>
+                <li>Look at the benchmarks ($150-250/hour is reasonable)</li>
+                <li>Remember what they're comparing you to (full-time hire costs way more)</li>
+                <li>Pick a number and practice saying it confidently</li>
+                <li>Quote it to real prospects</li>
+                <li>Adjust based on patterns, not individual reactions</li>
+            </ol>
+            
+            <p>Your first price doesn't have to be perfect. It just has to exist.</p>
+            
+            <p>The market will teach you faster than any framework.</p>
+            
+            <div class="divider"></div>
+            
+            <div class="cta-section">
+                <p>Want more practical strategies on building your thing without the BS? Subscribe to our newsletter at nowlaunch.it for weekly advice on going solo.</p>
+                
+                <a href="/" class="newsletter-btn">Join LaunchIT! Labs Newsletter</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
