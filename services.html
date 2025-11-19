@@ -13,8 +13,8 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - LaunchIT! Labs</title>
-    <meta property="og:title" content="Launch Program - LaunchIT! Labs">
+    <title>Work With Us - LaunchIT! Labs</title>
+    <meta property="og:title" content="Work With Us - LaunchIT! Labs">
     <meta property="og:description" content="Four sessions to go from stuck to launched">
     <meta property="og:image" content="https://nowlaunch.it/launchit-labs-logo.png">
     <meta property="og:url" content="https://nowlaunch.it/services">
@@ -36,22 +36,44 @@
         
         .header {
             padding: 40px 20px 20px;
-            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
             font-family: 'Onest', sans-serif;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 900;
             color: #0a0a0a;
-            margin-bottom: 10px;
             letter-spacing: -0.02em;
             text-decoration: none;
-            display: inline-block;
         }
         
         .logo:hover {
             opacity: 0.8;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            font-size: 1em;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .nav a:hover {
+            opacity: 0.6;
         }
         
         .hero {
@@ -273,6 +295,23 @@
         }
         
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .logo {
+                font-size: 1.5em;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+            
+            .nav a {
+                font-size: 0.95em;
+            }
+            
             .service-card {
                 padding: 40px 30px;
             }
@@ -302,7 +341,12 @@
 </head>
 <body>
     <div class="header">
-        <a href="/" class="logo">LaunchIT! Labs</a>
+        <div class="header-content">
+            <a href="/" class="logo">LaunchIT! Labs</a>
+            <nav class="nav">
+                <a href="/resources">Resources</a>
+            </nav>
+        </div>
     </div>
     
     <div class="hero">
