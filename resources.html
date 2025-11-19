@@ -36,22 +36,44 @@
         
         .header {
             padding: 40px 20px 20px;
-            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
             font-family: 'Onest', sans-serif;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 900;
             color: #0a0a0a;
-            margin-bottom: 10px;
             letter-spacing: -0.02em;
             text-decoration: none;
-            display: inline-block;
         }
         
         .logo:hover {
             opacity: 0.8;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            font-size: 1em;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .nav a:hover {
+            opacity: 0.6;
         }
         
         .hero {
@@ -115,26 +137,26 @@
             opacity: 0.6;
         }
         
-     .placeholder-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #e9d5ff;
-    color: #0a0a0a;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-         z-index: 10;
-}
+        .placeholder-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e9d5ff;
+            color: #0a0a0a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
 
-.video-card .placeholder-badge {
-    background: white !important;
-    color: #0f766e !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-}
+        .video-card .placeholder-badge {
+            background: white !important;
+            color: #0f766e !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+        }
         
         .guide-category {
             display: inline-block;
@@ -354,6 +376,23 @@
         }
         
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .logo {
+                font-size: 1.5em;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+            
+            .nav a {
+                font-size: 0.95em;
+            }
+            
             .hero-title {
                 font-size: 1.8em;
             }
@@ -376,7 +415,12 @@
 </head>
 <body>
     <div class="header">
-        <a href="/" class="logo">LaunchIT! Labs</a>
+        <div class="header-content">
+            <a href="/" class="logo">LaunchIT! Labs</a>
+            <nav class="nav">
+                <a href="/services">Work With Us</a>
+            </nav>
+        </div>
     </div>
     
     <div class="hero">
@@ -410,16 +454,17 @@
                     </div>
                     <a href="/launch-decision-guide.html" class="guide-cta">Read the Complete Guide</a>
                 </div>
-<!-- REAL GUIDE #2 -->
-<div class="guide-card" data-category="launching">
-    <span class="guide-category">Launching</span>
-    <h3 class="guide-title">What Should I Charge?</h3>
-    <div class="guide-preview">
-        <p><strong>A Practical Guide to Pricing When You Have No Idea Where to Start</strong></p>
-        <p>The moment when someone asks "What's your pricing?" and your brain goes blank. Learn the two pricing models that work, avoid the five mistakes everyone makes, and figure out what to charge without underpricing or overpricing yourself.</p>
-    </div>
-    <a href="/pricing-guide.html" class="guide-cta">Read the Complete Guide</a>
-</div>
+
+                <!-- REAL GUIDE #2 -->
+                <div class="guide-card" data-category="launching">
+                    <span class="guide-category">Launching</span>
+                    <h3 class="guide-title">What Should I Charge?</h3>
+                    <div class="guide-preview">
+                        <p><strong>A Practical Guide to Pricing When You Have No Idea Where to Start</strong></p>
+                        <p>The moment when someone asks "What's your pricing?" and your brain goes blank. Learn the two pricing models that work, avoid the five mistakes everyone makes, and figure out what to charge without underpricing or overpricing yourself.</p>
+                    </div>
+                    <a href="/pricing-guide.html" class="guide-cta">Read the Complete Guide</a>
+                </div>
                 
                 <!-- PLACEHOLDER GUIDE #2 -->
                 <div class="guide-card placeholder" data-category="planning">
@@ -501,21 +546,21 @@
                 </div>
                 
                 <!-- REAL VIDEO #2 -->
-<div class="video-card" data-category="planning">
-    <div class="video-thumbnail">
-        <iframe 
-            src="https://www.youtube.com/embed/78ETKpEaAzI" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-    <div class="video-info">
-        <h3 class="video-title">Should You Actually Build It?</h3>
-        <span class="video-category">Planning</span>
-    </div>
-</div>
+                <div class="video-card" data-category="planning">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="https://www.youtube.com/embed/78ETKpEaAzI" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Should You Actually Build It?</h3>
+                        <span class="video-category">Planning</span>
+                    </div>
+                </div>
                 
                 <!-- PLACEHOLDER VIDEO #3 -->
                 <div class="video-card placeholder" data-category="planning">
