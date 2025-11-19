@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5E4YD27419"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-5E4YD27419');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaunchIT! Labs - Subscribe (TEST)</title>
-    <meta property="og:title" content="LaunchIT! Labs - Turn Your Expertise Into Income">
+    <title>LaunchIT! Labs</title>
+    <meta property="og:title" content="LaunchIT! Labs - Stop Thinking, Start Building">    
     <meta property="og:description" content="Nikki built a six-figure side hustle while working full-time. Jake left his VP role and replaced his salary in six months.">
     <meta property="og:image" content="https://nowlaunch.it/launchit-labs-logo.png">
     <meta property="og:url" content="https://nowlaunch.it">
@@ -25,33 +35,73 @@
             color: #0a0a0a;
             background: linear-gradient(160deg, #faf5ff 0%, #f3e8ff 30%, #e9d5ff 60%, #d8b4fe 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 40px 20px;
+        }
+        
+        .header {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Onest', sans-serif;
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #0a0a0a;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
+        
+        .logo:hover {
+            opacity: 0.8;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            font-size: 1em;
+            font-weight: 700;
+            color: #0a0a0a;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .nav a:hover {
+            opacity: 0.6;
         }
         
         .container {
             max-width: 700px;
             width: 100%;
-            text-align: center;
+            margin: 0 auto;
         }
         
-        .logo {
-            font-family: 'Onest', sans-serif;
-            font-size: 3em;
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero-title {
+            font-size: 2.5em;
             font-weight: 900;
             color: #0a0a0a;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
+            line-height: 1.2;
             letter-spacing: -0.02em;
         }
         
-        .intro {
-            font-size: 1.7em;
-            font-weight: 700;
+        .hero-subtitle {
+            font-size: 1.4em;
+            font-weight: 600;
             color: #0a0a0a;
             line-height: 1.5;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         
         .highlight {
@@ -72,14 +122,13 @@
             border-radius: 2px;
         }
         
-        .tagline {
-            font-family: 'Onest', sans-serif;
+        .intro {
             font-size: 1.3em;
-            font-weight: 800;
+            font-weight: 600;
             color: #0a0a0a;
-            margin-bottom: 50px;
-            line-height: 1.3;
-            letter-spacing: -0.02em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: center;
         }
         
         .photo-placeholder {
@@ -99,12 +148,70 @@
             overflow: hidden;
         }
         
+        .support-section {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+            border: 3px solid #d8b4fe;
+            margin-bottom: 50px;
+        }
+        
+        .support-section h2 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #0a0a0a;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+        
+        .support-grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .support-item {
+            padding: 30px;
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-radius: 15px;
+            border-left: 5px solid #14b8a6;
+        }
+        
+        .support-item h3 {
+            font-size: 1.4em;
+            font-weight: 800;
+            color: #0a0a0a;
+            margin-bottom: 15px;
+        }
+        
+        .support-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #0a0a0a;
+            margin-bottom: 15px;
+        }
+        
+        .support-item a {
+            display: inline-block;
+            color: #0f766e;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .support-item a:hover {
+            opacity: 0.7;
+        }
+        
         .value-prop {
             font-size: 1.4em;
             font-weight: 700;
             color: #0a0a0a;
             margin-bottom: 20px;
             line-height: 1.5;
+            text-align: center;
         }
         
         .signup-box {
@@ -113,8 +220,6 @@
             border-radius: 20px;
             box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
             border: 3px solid #d8b4fe;
-            max-width: 600px;
-            margin: 0 auto;
         }
         
         .beehiiv-form-wrapper {
@@ -126,11 +231,15 @@
         }
         
         .beehiiv-embed {
-    display: inline-block !important;
-    margin: 0 !important;
-    width: 450px !important;
-    height: 300px !important;
-}
+            display: inline-block !important;
+            margin: 0 !important;
+            width: 500px !important;
+            height: 227px !important;
+            border-radius: 0px !important;
+            background-color: transparent !important;
+            box-shadow: 0 0 #0000 !important;
+            max-width: 100% !important;
+        }
         
         .privacy-note {
             margin-top: 20px;
@@ -141,16 +250,42 @@
         }
         
         @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+            
             .logo {
-                font-size: 2.2em;
+                font-size: 1.5em;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+            
+            .nav a {
+                font-size: 0.95em;
+            }
+            
+            .hero-title {
+                font-size: 1.8em;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2em;
             }
             
             .intro {
-                font-size: 1.3em;
+                font-size: 1.15em;
             }
             
-            .tagline {
-                font-size: 1.1em;
+            .support-section {
+                padding: 30px 25px;
+            }
+            
+            .support-section h2 {
+                font-size: 1.5em;
             }
             
             .value-prop {
@@ -164,20 +299,31 @@
             .beehiiv-embed {
                 width: 100% !important;
                 max-width: 400px !important;
-                height: 330px !important;
+                height: 250px !important;
             }
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <a href="/" class="logo">LaunchIT! Labs</a>
+        <nav class="nav">
+            <a href="/resources">Resources</a>
+            <a href="/services">Work With Us</a>
+        </nav>
+    </div>
+    
     <div class="container">
-        <div class="logo">LaunchIT! Labs</div>
-        
-        <p class="intro">Nikki built a <span class="highlight">six-figure side hustle</span> while working full-time. Jake left his VP role and <span class="highlight">replaced his salary</span> in six months.</p>
+        <div class="hero">
+            <h1 class="hero-title">LaunchIT! Labs is for people who are done waiting for the "right time"</h1>
+            <p class="hero-subtitle">You've outgrown settling for "fine." You're ready to design a life that actually feels like yours.</p>
+        </div>
         
         <div class="divider"></div>
         
-        <p class="tagline">Now they're pulling back the curtain.</p>
+        <p class="intro">Nikki built a <span class="highlight">six-figure side hustle in under 12 months</span> while working full-time. Jake replaced his <span class="highlight">VP of Sales salary within six months</span> of going solo.</p>
+        
+        <p class="intro">Now they're pulling back the curtain to show you exactly how and why.</p>
         
         <div class="photo-placeholder">
             <img src="jake-nikki-photo.jpg" alt="Jake and Nikki" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
@@ -185,20 +331,47 @@
         
         <div class="divider"></div>
         
-        <p class="value-prop"><strong>And sharing the strategies, learnings, and frameworks that made it possible.</strong></p>
-        
-        <p class="value-prop"><strong>Join below if you want in.</strong></p>
+        <div class="support-section">
+            <h2>We support you at every stage</h2>
+            
+            <div class="support-grid">
+                <div class="support-item">
+                    <h3>Resources</h3>
+                    <p>Everything you need to go from idea to first client—guides, video walkthroughs, and real examples of people doing it.</p>
+                    <a href="/resources">Browse Resources →</a>
+                </div>
+                
+                <div class="support-item">
+                    <h3>1:1 Strategic Coaching</h3>
+                    <p>Work directly with Jake and Nikki to get clear on what you actually want next, build your offer, and make the leap—whether that's a side hustle, full transition, or hybrid path.</p>
+                    <a href="/services">Work With Us →</a>
+                </div>
+                
+                <div class="support-item">
+                    <h3>Weekly Newsletter</h3>
+                    <p>Practical frameworks, real stories, and the confidence to take ownership of your future instead of hoping for the best. No fluff, just what actually works.</p>
+                    <a href="#signup">Subscribe Below →</a>
+                </div>
+            </div>
+        </div>
         
         <div class="divider"></div>
         
-        <div class="signup-box">
+        <p class="value-prop"><strong>This isn't just content. It's a movement for people who are done thinking about it and ready to build what's next.</strong></p>
+        
+        <p class="value-prop"><strong>Join us if you're in.</strong></p>
+        
+        <div class="divider"></div>
+        
+        <div class="signup-box" id="signup">
             <div class="beehiiv-form-wrapper">
                 <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
                 <iframe src="https://subscribe-forms.beehiiv.com/66b6cdd0-5c79-44c5-b293-e1a8c41ad356" 
                         class="beehiiv-embed" 
                         data-test-id="beehiiv-embed" 
                         frameborder="0" 
-                        scrolling="no">
+                        scrolling="no" 
+                        style="width: 500px; height: 227px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;">
                 </iframe>
             </div>
             
